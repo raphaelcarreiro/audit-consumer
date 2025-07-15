@@ -1,6 +1,6 @@
 ## Description
 
-Hub B2B connector arquétipo
+audit consumer service
 
 ## Installation
 
@@ -19,17 +19,4 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
 ```

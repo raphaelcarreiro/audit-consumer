@@ -1,3 +1,0 @@
-include:
-  - project: 'infralabs/infra-shop/hub-b2b/devops'
-    file: '/cicd/aks_pipeline.yaml'
