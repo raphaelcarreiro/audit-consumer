@@ -1,6 +1,6 @@
-import { EntityIdVo } from './value-objects/entity-id.vo';
+import { ValueObjectAbsctract } from './value-objects/value-object';
 
 export abstract class EntityAbstract {
-  abstract id: EntityIdVo;
+  abstract id: ValueObjectAbsctract<string>;
   abstract toJSON(): any;
 }

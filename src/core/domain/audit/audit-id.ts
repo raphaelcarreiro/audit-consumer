@@ -1,3 +1,3 @@
-import { EntityIdVo } from '../shared/value-objects/entity-id.vo';
+import { Uuid } from '../shared/value-objects/uuid.vo';
 
-export class AuditId extends EntityIdVo {}
+export class AuditId extends Uuid {}

@@ -15,6 +15,7 @@ export async function connectMicroservice(app: INestApplication) {
       strategy: new KafkaTransportStrategy({
         client: {
           brokers: configService.get('KAFKA_BROKERS').split(','),
+          clientId: configService.get('KAFKA_CLIENT_ID'),
         },
         consumer: {
           groupId: `${configService.get('KAFKA_CONSUMER_GROUP_ID')}`,

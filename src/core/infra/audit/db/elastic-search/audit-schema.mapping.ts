@@ -1,54 +1,25 @@
 import { MappingProperty, PropertyName } from '@elastic/elasticsearch/lib/api/types';
 
 export const auditSchemaMappingProps: Record<PropertyName, MappingProperty> = {
-  correlation_id: {
+  id: {
     type: 'keyword',
   },
-  start: {
+  created_at: {
     type: 'date',
-    format: 'yyyy-MM-dd HH:mm:ss',
-  },
-  type: {
-    type: 'text',
-  },
-  distributor_id: {
-    type: 'integer',
-  },
-  sellerName: {
-    type: 'text',
-  },
-  storeName: {
-    type: 'text',
   },
   route: {
+    type: 'keyword',
+  },
+  route_name: {
+    type: 'keyword',
+  },
+  request: {
     type: 'text',
   },
-  input: {
+  response: {
     type: 'text',
   },
-  output: {
-    type: 'text',
-  },
-  end: {
-    type: 'date',
-    format: 'yyyy-MM-dd HH:mm:ss',
-  },
-  success: {
-    type: 'boolean',
-  },
-  duration: {
-    type: 'long',
-  },
-  headers: {
-    type: 'text',
-  },
-  retrySequence: {
-    type: 'integer',
-  },
-  storeId: {
-    type: 'integer',
-  },
-  interaction_quantity: {
-    type: 'integer',
+  status: {
+    type: 'keyword',
   },
 };
