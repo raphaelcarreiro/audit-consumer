@@ -13,6 +13,10 @@ export class AuditMapper {
       request: document.request,
       response: document.response,
       status: document.status,
+      started_at: new Date(document.started_at),
+      finished_at: new Date(document.finished_at),
+      application_name: document.application_name,
+      duration: document.duration,
     });
   }
 

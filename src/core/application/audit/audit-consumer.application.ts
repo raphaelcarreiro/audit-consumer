@@ -11,6 +11,10 @@ type Input = {
   request: string;
   response: string;
   status: string;
+  started_at: string;
+  finished_at: string;
+  application_name: string;
+  duration: number;
 };
 
 export class AuditConsumerApplication {
@@ -26,6 +30,10 @@ export class AuditConsumerApplication {
       request: input.request,
       response: input.response,
       status: input.status,
+      started_at: new Date(input.started_at),
+      finished_at: new Date(input.finished_at),
+      application_name: input.application_name,
+      duration: input.duration,
     });
 
     await this.repository.save(audit);
