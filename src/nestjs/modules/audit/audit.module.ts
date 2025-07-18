@@ -3,7 +3,7 @@ import { KafkaModule } from '../kafka/kafka.module';
 import AuditRepository from '@core/infra/audit/db/elastic-search/audit.repository';
 import { ElasticsearchService } from '@nestjs/elasticsearch';
 import { ElasticSearchModule } from '../elastic/elastic-search.module';
-import { AuditConsumerApplication } from '@core/application/audit/audit-consumer.application';
+import { AuditConsumerUseCase } from '@core/application/audit/audit-consumer.usecase';
 import { AuditController } from './audit.controller';
 
 @Module({
@@ -15,12 +15,12 @@ import { AuditController } from './audit.controller';
       inject: [ElasticsearchService],
     },
     {
-      provide: 'AuditConsumerApplication',
-      useFactory: repository => new AuditConsumerApplication(repository),
+      provide: 'AuditConsumerUseCase',
+      useFactory: repository => new AuditConsumerUseCase(repository),
       inject: ['AuditRepository'],
     },
   ],
   controllers: [AuditController],
-  exports: ['AuditRepository', 'AuditConsumerApplication'],
+  exports: ['AuditRepository', 'AuditConsumerUseCase'],
 })
 export class AuditModule {}
