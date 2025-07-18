@@ -22,4 +22,19 @@ export const auditSchemaMappingProps: Record<PropertyName, MappingProperty> = {
   status: {
     type: 'keyword',
   },
+  user_id: {
+    type: 'keyword',
+  },
+  started_at: {
+    type: 'date',
+  },
+  finished_at: {
+    type: 'date',
+  },
+  application_name: {
+    type: 'keyword',
+  },
+  duration: {
+    type: 'long',
+  },
 };
