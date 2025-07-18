@@ -17,7 +17,7 @@ type Input = {
   duration: number;
 };
 
-export class AuditConsumerApplication {
+export class AuditConsumerUseCase {
   constructor(private readonly repository: IAuditRepository) {}
 
   public async execute(input: Input) {
