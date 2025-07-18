@@ -52,33 +52,16 @@ Consumidor de mensagens Kafka construído com [NestJS](https://nestjs.com/), res
 
 2. Inicie os containers:
    ```bash
-   docker-compose up --build
+   docker compose up --build
    ```
 
 > **Nota:** Certifique-se de que o Kafka está acessível no host ou via container linkado.
 
 ---
 
-## 🧪 Testes
-
-Execute os testes unitários com:
-
-```bash
-npm run test
-```
-
----
-
-## 🔍 Observabilidade
-
-A aplicação está preparada para integração com o **OpenTelemetry** e pode ser exportada para ferramentas como **Grafana**, **Jaeger** ou **Elastic APM**.
-
----
-
 ## 📦 Scripts Úteis
 
 - `npm run start:dev` — Inicia em modo de desenvolvimento (hot reload)
-- `npm run test` — Roda os testes unitários
 - `npm run lint` — Analisa o código com ESLint
 - `npm run build` — Compila a aplicação
 
